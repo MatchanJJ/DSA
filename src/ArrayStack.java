@@ -1,6 +1,6 @@
 import java.util.EmptyStackException;
 
-public class ArrayStack implements StackADT {
+public class ArrayStack extends StackADT {
     private int maxSize;
     private int top;
     private int[] stackArray;
