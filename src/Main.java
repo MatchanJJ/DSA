@@ -1,13 +1,17 @@
 public class Main {
     public static void main(String[] args) {
         StackADT stack = new ArrayStack(5);
+            String str = "Hello";
+            for (int i=0; i<str.length();i++){
+                char reversed = str.charAt(i);
+                stack.push(reversed);
+            }
+            for (int j = 0; j < str.length();j++){
+                System.out.print(stack.pop());
+            }
 
-        stack.push(10);
-        stack.push(20);
-        System.out.println("Top element is: " + stack.peek());
 
-        while (!stack.isEmpty()) {
-            System.out.println("Popped: " + stack.pop());
         }
     }
-}
+
+

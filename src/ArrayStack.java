@@ -3,38 +3,38 @@ import java.util.EmptyStackException;
 public class ArrayStack extends StackADT {
     private int maxSize;
     private int top;
-    private int[] stackArray;
+    private char[] stackArray; // Change from String[] to char[]
 
     public ArrayStack(int size) {
         this.maxSize = size;
-        this.stackArray = new int[maxSize];
+        this.stackArray = new char[maxSize]; // Initialize as char array
         this.top = -1;
     }
 
     @Override
-    public void push(int element) {
+    public void push(char element) { // Change parameter type to char
         if (isFull()) {
             throw new StackOverflowError("Stack Overflow! Cannot push " + element);
         } else {
-            stackArray[++top] = element;
+            stackArray[++top] = element; // Store char element
         }
     }
 
     @Override
-    public int pop() {
+    public char pop() { // Return type remains char
         if (isEmpty()) {
             throw new EmptyStackException();
         } else {
-            return stackArray[top--];
+            return stackArray[top--]; // Return char element
         }
     }
 
     @Override
-    public int peek() {
+    public char peek() { // Return type remains char
         if (isEmpty()) {
             throw new EmptyStackException();
         } else {
-            return stackArray[top];
+            return stackArray[top]; // Return char element
         }
     }
 

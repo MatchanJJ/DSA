@@ -1,27 +1,19 @@
 abstract class StackADT {
-    void push(int element) {
+    // Abstract method for pushing an element onto the stack
+    abstract void push(char element);
 
-    }
+    // Abstract method for popping an element from the stack
+    abstract char pop();
 
-    int pop() {
-        return 0;
-    }
+    // Abstract method for peeking at the top element of the stack
+    abstract char peek();
 
-    int peek() {
-        return 0;
-    }
+    // Method to check if the stack is empty
+    abstract boolean isEmpty();
 
-    boolean isEmpty() {
-        return false;
-    }
+    // Optional method to check if the stack is full (for bounded stacks)
+    abstract boolean isFull();
 
-    boolean isFull() // Optional, for bounded stacks
-    {
-        return false;
-    }
-
-    int size() // Optional
-    {
-        return 0;
-    }
+    // Optional method to get the size of the stack
+    abstract int size();
 }
